@@ -2,4 +2,7 @@
 const Input = require('./lib/input');
 const Note = require('./lib/notes');
 const result = new Input;
-new Note(result);
+console.log(result);
+if (result.payload){
+  new Note(result);
+}
