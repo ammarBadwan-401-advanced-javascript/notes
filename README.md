@@ -5,7 +5,8 @@
 ### Author: Ammar Badwan
 
 ### Links and Resources
-- [submission PR](https://github.com/ammarBadwan-401-advanced-javascript/notes/pull/1)
+- [submission PR](https://github.com/ammarBadwan-401-advanced-javascript/notes/pull/2)
+- [GitHub Actions](https://github.com/ammarBadwan-401-advanced-javascript/notes/runs/687317645?check_suite_focus=true)
 
 ### Modules
 
@@ -21,7 +22,8 @@
 * `node index.js (--add or -a) 'The note you want to save'
 
 ### Tests
-* Lint test: `eslint '**/*.js'`
+* Lint test: `npm run lint`
+* Unit test: `npm test`
 
 ### UML 
 ![UML Diagram Lab-01](./assets/whiteboard-lab-01.jpg)
