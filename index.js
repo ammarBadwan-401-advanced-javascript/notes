@@ -5,3 +5,5 @@ const result = new Input;
 if (result.payload){
   new Note(result);
 }
+
+console.log(result);
