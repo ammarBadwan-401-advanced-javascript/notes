@@ -1,4 +1,4 @@
-# LAB - 01
+# LAB - 02
 
 ## Notesy 
 
