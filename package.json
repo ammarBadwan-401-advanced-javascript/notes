@@ -4,7 +4,7 @@
   "description": "",
   "main": "input.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/ammarBadwan-401-advanced-javascript/notes#readme",
   "devDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1"
   },
   "dependencies": {
     "minimist": "^1.2.5"
