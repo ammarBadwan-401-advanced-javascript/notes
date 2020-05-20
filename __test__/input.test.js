@@ -15,7 +15,7 @@ describe('Input Module',()=>{
 
   it('Checking actionType() method if the entered flag was right',()=>{
     let inputTest = new Input();
-    expect(inputTest.actionType({'add':'note'})).toEqual('add');
+    expect(inputTest.actionType({'add':'note','category':'test'})).toEqual('add');
   });
 
   it('Checking addCheck() method if the entered flag was right and there was a note',()=>{

@@ -7,4 +7,4 @@ const result = new Input;
 // }
 new Note(result);
 
-console.log(result);
+// console.log(result);
