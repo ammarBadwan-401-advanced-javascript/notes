@@ -1,14 +1,9 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const MONGOOSE_URI = 'mongodb://localhost:27017/notes';
 const schema = require('./notes-schema');
 
-mongoose.connect(MONGOOSE_URI, {
-  useNewUrlParser: true, 
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+
 
 
 class Note {
@@ -24,9 +19,9 @@ class Note {
       category: obj.category,
     };
     let notes = new schema(savedNote);
-    await notes.save();
+    let saving = await notes.save();
     console.log('note saved ' + notes.text);
-    await mongoose.disconnect();
+    return saving;
   }
 
   
@@ -39,7 +34,7 @@ class Note {
         console.log(`Category: ${value.category}     ID: ${value._id}`);
         console.log('--------------------------------------');
       });
-      await mongoose.disconnect();
+      return list;
 
     } else {
       let list = await schema.find({});
@@ -48,7 +43,7 @@ class Note {
         console.log(`Category: ${value.category}     ID: ${value._id}`);
         console.log('--------------------------------------');
       });
-      await mongoose.disconnect();
+      return list;
     }
   }
 
