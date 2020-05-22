@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ammarBadwan-401-advanced-javascript/notes#readme",
   "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
     "eslint": "^7.0.0",
     "jest": "^26.0.1"
   },

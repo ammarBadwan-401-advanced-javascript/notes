@@ -1,4 +1,4 @@
-# LAB - 03
+# LAB - 04
 
 ## Notesy 
 
@@ -22,6 +22,7 @@
 * `node index.js (--add or -a) 'The note you want to save' --category 'your category'` <--- to add to database
 * `node index.js --delete 'data ID'` <----- to delete from database
 * `node index.js --list (Optional: Category name)` <---- too show database items
+* `node index.js --update 'updated message' --id 'message id'` <---- to update an item 
 
 ### Tests
 * Lint test: `npm run lint`
