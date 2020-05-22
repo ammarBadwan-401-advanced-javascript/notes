@@ -1,10 +1,6 @@
 'use strict';
 
-const mongoose = require('mongoose');
 const schema = require('./notes-schema');
-
-
-
 
 class Note {
   
@@ -50,7 +46,7 @@ class Note {
   async update(obj){
     if (obj.fail){
       console.log('Please provide more information');
-      mongoose.disconnect();
+      return 'None';
     } else {
       let list = await schema.findByIdAndUpdate(obj.updateId,{text: obj.updateMessage},{new:true})
         .catch(err=>{
@@ -58,22 +54,22 @@ class Note {
           return null;
         });
       if (list === null){
-        mongoose.disconnect();
+        return list;
       } else {
         console.log('This is the new updated note: '+ list.text);
-        mongoose.disconnect();
+        return list;
       }
     }
   }
 
   async delete(obj){
     if (obj.deleteId){
-      await schema.findOneAndRemove({_id:obj.deleteId});
+      let list = await schema.findOneAndRemove({_id:obj.deleteId});
       console.log('Deleted Note ' + obj.deleteId);
-      await mongoose.disconnect();
+      return list;
     } else {
       console.log('No ID was provided,please provide an ID');
-      await mongoose.disconnect();
+      return null;
     }
   }
 }
